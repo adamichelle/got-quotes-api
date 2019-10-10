@@ -1,0 +1,38 @@
+{
+  "name": "got-quotes-api",
+  "version": "1.0.0",
+  "description": "A RESTful API for quotes from 'Game of Thrones' characters.",
+  "main": "app.js",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "dev": "set NODE_ENV=dev&& nodemon --exec babel-node lib/app.js",
+    "start": "npm run build && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamichelle/got-quotes-api.git"
+  },
+  "keywords": [
+    "[gameOfThronesQuotesAPI",
+    "gotQuotesAPI]"
+  ],
+  "author": "Aniuchi Adaobi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamichelle/got-quotes-api/issues"
+  },
+  "homepage": "https://github.com/adamichelle/got-quotes-api#readme",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "body-parser": "^1.19.0",
+    "copyfiles": "^2.1.1",
+    "express": "^4.17.1"
+  }
+}
