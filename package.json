@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "build": "babel lib -d dist",
+    "createAndPopulate": "node ./lib/dbhelper createQuotesTable&& node ./lib/dbhelper addQuotesFromFile",
     "dev": "set NODE_ENV=dev&& nodemon --exec babel-node lib/app.js",
+    "drop": "node ./lib/dbhelper dropQuotesTable",
     "start": "npm run build && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,8 +35,10 @@
     "babel-core": "^6.26.3",
     "body-parser": "^1.19.0",
     "copyfiles": "^2.1.1",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "make-runnable": "^1.3.6",
+    "moment": "^2.24.0",
     "pg": "^7.11.0"
   }
 }
