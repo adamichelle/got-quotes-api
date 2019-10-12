@@ -13,9 +13,13 @@ header {
     font-weight: bold;
 }
 
+.nav-item .active {
+    border-bottom: #007BFF;
+}
+
 .nav-link:hover, .navbar-brand:hover {
     color: #000000;
-    border-bottom: 1px solid #AB013A;
+    border-bottom: 1px solid #007BFF;
 }
 
 .hero {
@@ -26,4 +30,9 @@ header {
     background: rgba(0, 0, 0, 0.7);
     color: #FFFFFF !important;
     min-height: 350px;
+}
+
+footer.copyright {
+    border: 1px solid #E8E6E7;
+    background-color: rgba(213, 207, 209, 0.3);
 }
