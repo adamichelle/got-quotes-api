@@ -23,8 +23,8 @@ paths:
     get:
       tag: 
         - "quotes"
-      summary: Gets all quotes.
-      description: Gets an array of all quote objects.
+      summary: Get all quotes.
+      description: Get an array of all quote objects.
       responses:
         200:
           description: Sucessful retrieval of array of quote objects
@@ -41,7 +41,7 @@ paths:
                     items:
                       $ref: "#/definitions/Quote"
         400:
-          description: Error retriving array of quote objects
+          description: Error retrieving array of quote objects
           content:
             application/json:
               schema:
@@ -53,6 +53,39 @@ paths:
                   error:
                     type: string
                     example: 'unable to retrieve from db'
+  /quotes/:quoteId:
+    get:
+      tag: 
+        - "quotes"
+      summary: Get specific quote using the quote 'id' property.
+      description: Get a single quote object using the quote 'id' property.
+      responses:
+        200:
+          description: Sucessful retrieval of specific quote with the specified quote 'id'.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: 'success'
+                  data:
+                    type: object
+                    $ref: "#/definitions/Quote"
+        400:
+          description: Error retrieving specific quote with the specified quote 'id'.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: 'error'
+                  error:
+                    type: string
+                    example: 'No quote with id of 119 found'
   /quote:
     get:
       tag:
@@ -65,9 +98,16 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/definitions/Quote"
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: 'success'
+                  data:
+                    type: object
+                    $ref: "#/definitions/Quote"
         400:
-          description: Error retriving random quote object
+          description: Error retrieving random quote object
           content:
             application/json:
               schema:
