@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "babel lib -d dist",
-    "dev": "set NODE_ENV=dev&& npm run dropCreateAndPopulateTable&& nodemon --exec babel-node lib/app.js",
+    "dev": "set NODE_ENV=dev&& nodemon --exec babel-node lib/app.js",
     "dropCreateAndPopulateTable": "node ./lib/dbhelper dropQuotesTable&& node ./lib/dbhelper createQuotesTable&& node ./lib/dbhelper addQuotesFromFile",
     "start": "npm run dropCreateAndPopulateTable&& npm run build && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
