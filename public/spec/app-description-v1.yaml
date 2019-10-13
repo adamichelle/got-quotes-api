@@ -1,0 +1,61 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a RESTful API for getting quotes from characters in the famous\
+    \ series Game of Thrones."
+  version: "1.0.0"
+  title: "GOT Quotes API"
+  termsOfService: ""
+  contact:
+    email: "adamichelle@gmail.com"
+  license:
+    name: "ISC"
+    url: "https://github.com/adamichelle/got-quotes-api/blob/master/LICENSE"
+host: "https://gameofthrones-quotes-api.herokuapp.com"
+basePath: "/api/v1"
+tags:
+- name: "quotes"
+  description: "Everything about the quotes"
+schemes:
+- "https"
+paths:
+  /quotes:
+    get:
+      tag: 
+        - "quotes"
+      summary: Gets all quotes
+      description: Gets an array of all quotes
+      responses:
+        200:
+          description: An array of quote objects
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: 'success'
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      character:
+                        type: string
+                      quote:
+                        type: string
+        400:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: 'error'
+                  error:
+                    type: string
+                    message: 'error message'
+          
