@@ -8,7 +8,7 @@
     "dropCreateAndPopulateTable": "node ./lib/dbhelper dropQuotesTable&& node ./lib/dbhelper createQuotesTable&& node ./lib/dbhelper addQuotesFromFile",
     "dev": "set NODE_ENV=dev&& nodemon --exec babel-node lib/app.js",
     "drop": "node ./lib/dbhelper dropQuotesTable",
-    "start": "npm run build && node dist/app.js",
+    "start": "npm run dropCreateAndPopulateTable&& npm run build && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
