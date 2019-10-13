@@ -7,7 +7,7 @@ info:
   title: "GOT Quotes API"
   termsOfService: ""
   contact:
-    email: "adamichelle@gmail.com"
+    url: "https://github.com/adamichelle/got-quotes-api"
   license:
     name: "ISC"
     url: "https://github.com/adamichelle/got-quotes-api/blob/master/LICENSE"
