@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "babel lib -d dist",
-    "createAndPopulate": "node ./lib/dbhelper createQuotesTable&& node ./lib/dbhelper addQuotesFromFile",
+    "dropCreateAndPopulateTable": "node ./lib/dbhelper dropQuotesTable&& node ./lib/dbhelper createQuotesTable&& node ./lib/dbhelper addQuotesFromFile",
     "dev": "set NODE_ENV=dev&& nodemon --exec babel-node lib/app.js",
     "drop": "node ./lib/dbhelper dropQuotesTable",
     "start": "npm run build && node dist/app.js",
