@@ -23,11 +23,11 @@ paths:
     get:
       tag: 
         - "quotes"
-      summary: Gets all quotes
-      description: Gets an array of all quotes
+      summary: Gets all quotes.
+      description: Gets an array of all quote objects.
       responses:
         200:
-          description: An array of quote objects
+          description: Sucessful retrieval of array of quote objects
           content:
             application/json:
               schema:
@@ -37,14 +37,9 @@ paths:
                     type: string
                     default: 'success'
                   data:
-                    type: object
-                    properties:
-                      id:
-                        type: string
-                      character:
-                        type: string
-                      quote:
-                        type: string
+                    type: array
+                    items:
+                      $ref: "#/definitions/Quote"
         400:
           description: Error response
           content:
@@ -58,4 +53,44 @@ paths:
                   error:
                     type: string
                     message: 'error message'
-          
+  /quote:
+    get:
+      tag:
+        - "quotes"
+      Summary: Get a random quote
+      description: Get a single quote object randomly
+      responses:
+        200:
+          description: Successful retrival of random quote object
+          content:
+            application/json:
+              schema:
+                $ref: "#/definitions/Quote"
+        400:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: 'error'
+                  error:
+                    type: string
+                    message: 'error message'
+definitions:
+  Quote:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      character:
+        type: "string"
+        example: "Jon Snow"
+      quote:
+        type: "string"
+        example: "A girl is Arya Stark of Winterfell. And I'm going home."
+    xml:
+      name: "Quote"
