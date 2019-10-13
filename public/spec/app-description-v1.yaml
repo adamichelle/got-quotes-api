@@ -41,7 +41,7 @@ paths:
                     items:
                       $ref: "#/definitions/Quote"
         400:
-          description: Error response
+          description: Error retriving array of quote objects
           content:
             application/json:
               schema:
@@ -52,7 +52,7 @@ paths:
                     default: 'error'
                   error:
                     type: string
-                    message: 'error message'
+                    example: 'unable to retrieve from db'
   /quote:
     get:
       tag:
@@ -67,7 +67,7 @@ paths:
               schema:
                 $ref: "#/definitions/Quote"
         400:
-          description: Error response
+          description: Error retriving random quote object
           content:
             application/json:
               schema:
@@ -78,7 +78,7 @@ paths:
                     default: 'error'
                   error:
                     type: string
-                    message: 'error message'
+                    example: 'unable to retrieve from db'
 definitions:
   Quote:
     type: "object"
