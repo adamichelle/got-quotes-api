@@ -8,13 +8,17 @@ header {
     border-bottom: 1px solid #444444;
 }
 
-.nav-link, .navbar-brand {
-    color: #000000;
+.navbar-brand {
     font-weight: bold;
 }
 
-.nav-item .active {
-    border-bottom: #007BFF;
+.nav-link, .navbar-brand {
+    color: #000000;
+}
+
+.nav-item.active .nav-link{
+    border-bottom: 1px solid #000000;
+    font-weight: bold;
 }
 
 .nav-link:hover, .navbar-brand:hover {
@@ -30,6 +34,10 @@ header {
     background: rgba(0, 0, 0, 0.7);
     color: #FFFFFF !important;
     min-height: 350px;
+}
+
+.about {
+    min-height: 490px;
 }
 
 footer.copyright {
