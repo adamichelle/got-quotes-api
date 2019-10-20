@@ -53,6 +53,19 @@ paths:
                   error:
                     type: string
                     example: 'unable to retrieve from db'
+      parameters:
+        - in: query
+          name: character
+          schema:
+            type: string
+          description: The name of the character to get quote objects of. The values may or may not to be percent encoded.
+          example: 'Tyrion' 
+        - in: query
+          name: characters
+          schema:
+            type: string
+          description: The names of the characters to get quote objects of. Each character should be seperated with a comma. The values may or may not to be percent encoded.
+          example: 'Brienn of Tarth,Tyrion'              
   /quotes/:quoteId:
     get:
       tag: 
