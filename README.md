@@ -2,7 +2,7 @@
 Because it's the greatest series of all time and I couldn't find anything like this when I wanted to build [this](https://adamichelle.github.io/got-quote-generator/)
 
 ## Production Host
-[Game of Thrones Quote API on Heroku](https://gameofthrones-quotes-api.herokuapp.com/)
+[Game of Thrones Quote API on Heroku](https://got-quotes-api.up.railway.app)
 
 ## API Endpoints
 ### GET /quotes
@@ -44,7 +44,7 @@ Returns an array of quotes from a character specified if the query is succesful.
 
 #### Sample Query 1
 ```
-https://gameofthrones-quotes-api.herokuapp.com/quotes?character=Tyrion
+https://got-quotes-api.up.railway.app/quotes?character=Tyrion
 ```
 
 #### Sample Response 1
@@ -82,7 +82,7 @@ https://gameofthrones-quotes-api.herokuapp.com/quotes?character=Tyrion
 
 #### Sample Query 2
 ```
-https://gameofthrones-quotes-api.herokuapp.com/quotes?character=Tyrion,Lady%20Olenna
+https://got-quotes-api.up.railway.app/quotes?character=Tyrion,Lady%20Olenna
 ```
 
 #### Sample Response 2
@@ -155,7 +155,7 @@ Returns an object containing a single quote.
 Returns an object containing a single quote having the specified id.
 
 #### Sample Query
-https://gameofthrones-quotes-api.herokuapp.com/quotes/18
+https://got-quotes-api.up.railway.app/quotes/18
 ```
 {
     "status": "success",
