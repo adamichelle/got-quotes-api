@@ -2,7 +2,7 @@
 Because it's the greatest series of all time and I couldn't find anything like this when I wanted to build [this](https://adamichelle.github.io/got-quote-generator/)
 
 ## Production Host
-[Game of Thrones Quote API on Heroku](https://got-quotes-api.up.railway.app)
+[Game of Thrones Quote API on Railway](https://got-quotes-api.up.railway.app)
 
 ## API Endpoints
 ### GET /quotes
